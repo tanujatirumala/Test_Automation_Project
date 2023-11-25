@@ -36,7 +36,7 @@ def get_alert_message():
 
 #  Function to find the fake bar
 def find_fake_bar():
-    fake_gold = -1 # Initilasie fake gold number as -1
+    fake_gold = -1
     gold_bars = [i for i in range(len(buttons))]
     weigh_button = driver.find_element(By.ID, "weigh")
 

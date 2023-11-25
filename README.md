@@ -5,13 +5,15 @@ This Repository contains Test Automation project using Python and Selenium Webdr
 # Requirements
 
 * Python3
+* pip
 * Selenium
+* venv
 
 # Create and activate virtual environment
 
 <pre>
-`python -m venv <ENVIRONMENT_NAME>`
-`<ENVIRONMENT_NAME>\scripts\activate`</pre>
+`python -m venv ENVIRONMENT_NAME`
+`ENVIRONMENT_NAME\scripts\activate`</pre>
   
 # Installation
 

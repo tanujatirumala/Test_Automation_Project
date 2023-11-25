@@ -12,6 +12,19 @@ def load_bowl(bowl, arr):
 
 # Function to get the result
 def get_result():
+    """
+    Retrieves the result from a web page.
+
+    This function finds an element with the class name 'result'
+    containing a button element. It waits for the button text to change from '?'
+    and then returns the updated text.
+
+    Returns:
+    - str: The text of the result button(It can be =, < or >).
+
+    Note:
+    - The function uses an implicit wait of 3 seconds for the button text to change.
+    """
     result_div = driver.find_element(By.CLASS_NAME, "result")
     result_button = result_div.find_element(By.TAG_NAME, "button")
     while result_button.text == '?':

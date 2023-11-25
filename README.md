@@ -1,4 +1,5 @@
 # Test_Automation_Project
+
 This Repository contains Test Automation project using Python and Selenium Webdriver.
 
 # Requirements
@@ -8,8 +9,9 @@ This Repository contains Test Automation project using Python and Selenium Webdr
 
 # Create and activate virtual environment
 
+<pre>
 `python -m venv <ENVIRONMENT_NAME>`
-`<ENVIRONMENT_NAME>\scripts\activate`
+`<ENVIRONMENT_NAME>\scripts\activate`</pre>
   
 # Installation
 
@@ -27,7 +29,7 @@ By default, tests will be executed in Chrome.
 
 *Problem Statement:* Given a balanced scale and 9 gold bars of same size and look of which one is a fake gold bar with less weight. Find the fake bar with minimum comparisons.
 
-*Solution*
+*Solution:*
 
 * Gold bars will be divided in to three piles of equal length
 * Load pile1 on the left side and pile2 on the right side.
@@ -39,6 +41,7 @@ By default, tests will be executed in Chrome.
 
 
 # Results
+
 * The algorithm will populate and weight the gold bars until it found a fake one.
 * Fake bar number will be clicked.
 * In the terminal, Fake bar number, alert message, number of weighings and list of the weighings are printed.

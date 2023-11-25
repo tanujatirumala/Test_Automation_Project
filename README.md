@@ -3,12 +3,12 @@ This Repository contains Test Automation project using Python and Selenium Webdr
 
 # Requirements
 
-* Python
+* Python3
 * Selenium
 # Installation
 
-* pip install selenium
-* pip install webdriver_manager
+* `pip install selenium`
+* `pip install webdriver_manager`
   
 # Configuration
 
@@ -24,7 +24,7 @@ By default, tests will be executed in Chrome (normal mode).
 
 # Test Execution
 
-From the project root directory run    python test_automation.py / python3 test_automation.py
+From the project root directory run    `python test_automation.py`
 
 # Results
 * The algorithm will populate and weight the gold bars until it found a fake one.

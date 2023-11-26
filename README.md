@@ -26,6 +26,7 @@ ENVIRONMENT_NAME\scripts\activate</pre>
 ## Choosing Browser
 
  * When Promted, Enter the browser choice in the terminal. It can be chrome or firefox.
+ * Currently, It supports only chrome or firefox. If any other browser is chosen, the program will terminate.
 
 # Algorithm
 
@@ -33,18 +34,18 @@ ENVIRONMENT_NAME\scripts\activate</pre>
 
 *Solution:*
 
-* Gold bars will be divided in to three piles of equal length
+* Gold bars will be divided into three piles of equal length
 * Load pile1 on the left side and pile2 on the right side.
 * Get the result of the weighings.
 * If the result is "=", then pile3 will be the lighter pile.
 * If the result is "<", then pile1 will be the lighter pile, otherwise pile2 is the lighter pile.
-* Similarly, weigh the coins in the pile to find the lighter coin.
+* Similarly, weigh the coins in the lighter pile to find the lighter coin.
 * Varible fake_gold will contain the index of the fake gold bar. 
 
 
 # Results
 
-* The algorithm will populate and weight the gold bars until it found a fake one.
+* The algorithm will populate and weigh the gold bars until it finds a fake one.
 * Fake bar number will be clicked.
 * In the terminal, Fake bar number, alert message, number of weighings and list of the weighings are printed.
 

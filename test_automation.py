@@ -42,7 +42,6 @@ def reset_bowls():
 # Function to click on the fake bar number at the bottom of the website
 def click_fake_bar(fake_bar_number):
     id = "coin" + "_" + str(fake_bar_number)
-    print(f'{id=} {browser_choice=}')
     fake_bar_button = coins.find_element(By.ID, id).click()
 
 # Function to get the alert message after clicking the fake bar number
@@ -105,6 +104,7 @@ elif browser_choice.lower() == "firefox":
     driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()), options = options)
 else:
     print("Invalid browser choice. Please enter 'chrome' or 'firefox'.")
+    exit() # If an Invalid value is entered for the browser, terminate the program
 
 driver.get("http://sdetchallenge.fetch.com/")
 

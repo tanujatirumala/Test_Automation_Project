@@ -26,7 +26,7 @@ ENVIRONMENT_NAME\scripts\activate</pre>
 ## Choosing Browser
 
  * When Promted, Enter the browser choice in the terminal. It can be chrome or firefox.
- * Currently, It supports only chrome or firefox. If any other browser is chosen, the program will terminate.
+ * Currently, It supports only chrome or firefox. If any other browser is chosen, the program will print Invalid input and prompt again.
 
 # Algorithm
 

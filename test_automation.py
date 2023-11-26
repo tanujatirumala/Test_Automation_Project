@@ -48,7 +48,7 @@ def click_fake_bar(fake_bar_number):
 def get_alert_message():
     alert = driver.switch_to.alert
     alert_text =  alert.text
-    time.sleep(3)
+    time.sleep(1)
     driver.switch_to.alert.accept()
     return alert_text
 
@@ -94,17 +94,19 @@ def get_weighing_list():
     return weighing_list
 
 #  Open the website in the selected browser
-browser_choice = input("Enter 'chrome' or 'firefox' to choose the browser: ")
-if browser_choice.lower() == "chrome":
-    options = ChromeOptions()
-    options.add_experimental_option("detach", True)
-    driver = webdriver.Chrome(service = ChromeService(ChromeDriverManager().install()), options = options)
-elif browser_choice.lower() == "firefox":
-    options = FirefoxOptions()
-    driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()), options = options)
-else:
-    print("Invalid browser choice. Please enter 'chrome' or 'firefox'.")
-    exit() # If an Invalid value is entered for the browser, terminate the program
+while True:
+    browser_choice = input("Enter 'chrome' or 'firefox' to choose the browser: ")
+    if browser_choice.lower() == "chrome":
+        options = ChromeOptions()
+        options.add_experimental_option("detach", True)
+        driver = webdriver.Chrome(service = ChromeService(ChromeDriverManager().install()), options = options)
+        break
+    elif browser_choice.lower() == "firefox":
+        options = FirefoxOptions()
+        driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()), options = options)
+        break
+    else:
+        print("Invalid browser choice. Please enter 'chrome' or 'firefox'.")
 
 driver.get("http://sdetchallenge.fetch.com/")
 

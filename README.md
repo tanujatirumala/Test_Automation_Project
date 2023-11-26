@@ -26,7 +26,7 @@ ENVIRONMENT_NAME\scripts\activate</pre>
 ## Choosing Browser
 
  * When Promted, Enter the browser choice in the terminal. It can be chrome or firefox.
- * Currently, It supports only chrome or firefox. If any other browser is chosen, the program will print Invalid input and prompt again.
+ * Currently, It supports only chrome or firefox. If any other browser is chosen, the program will consider it as an invalid input and prompt again.
 
 # Algorithm
 
@@ -45,7 +45,7 @@ ENVIRONMENT_NAME\scripts\activate</pre>
 
 # Results
 
-* The algorithm will populate and weigh the gold bars until it finds a fake one.
+* The algorithm will populate the bowls and weigh the gold bars until it finds a fake one.
 * Fake bar number will be clicked.
 * In the terminal, Fake bar number, alert message, number of weighings and list of the weighings are printed.
 

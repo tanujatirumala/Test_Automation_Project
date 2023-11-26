@@ -17,11 +17,11 @@ ENVIRONMENT_NAME\scripts\activate</pre>
   
 # Installation
 
-`pip install -r requirements.txt`
+* From the project root directory run  `pip install -r requirements.txt`
 
 # Test Execution
 
- * From the project root directory run    `python test_automation.py`
+ * From the project root directory run  `python test_automation.py`
 
 ## Choosing Browser
 

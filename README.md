@@ -12,8 +12,8 @@ This Repository contains Test Automation project using Python and Selenium Webdr
 # Create and activate virtual environment
 
 <pre>
-`python -m venv ENVIRONMENT_NAME`
-`ENVIRONMENT_NAME\scripts\activate`</pre>
+python -m venv ENVIRONMENT_NAME
+ENVIRONMENT_NAME\scripts\activate</pre>
   
 # Installation
 
@@ -21,11 +21,11 @@ This Repository contains Test Automation project using Python and Selenium Webdr
 
 # Test Execution
 
-From the project root directory run    `python test_automation.py`
+ * From the project root directory run    `python test_automation.py`
 
-# Configuration
+## Choosing Browser
 
-By default, tests will be executed in Chrome.
+ * When Promted, Enter the browser choice in the terminal. It can be chrome or firefox.
 
 # Algorithm
 

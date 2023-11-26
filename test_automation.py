@@ -1,8 +1,12 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
+import time
 
 # Function to load the left and right bowls
 def load_bowl(bowl, arr):
@@ -38,12 +42,14 @@ def reset_bowls():
 # Function to click on the fake bar number at the bottom of the website
 def click_fake_bar(fake_bar_number):
     id = "coin" + "_" + str(fake_bar_number)
+    print(f'{id=} {browser_choice=}')
     fake_bar_button = coins.find_element(By.ID, id).click()
 
 # Function to get the alert message after clicking the fake bar number
 def get_alert_message():
     alert = driver.switch_to.alert
     alert_text =  alert.text
+    time.sleep(3)
     driver.switch_to.alert.accept()
     return alert_text
 
@@ -88,10 +94,18 @@ def get_weighing_list():
     weighing_list = driver.find_elements(By.CSS_SELECTOR, 'div.game-info > ol > li')
     return weighing_list
 
-# Open the website
-options = Options()
-options.add_experimental_option("detach", True)
-driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()), options = options)
+#  Open the website in the selected browser
+browser_choice = input("Enter 'chrome' or 'firefox' to choose the browser: ")
+if browser_choice.lower() == "chrome":
+    options = ChromeOptions()
+    options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(service = ChromeService(ChromeDriverManager().install()), options = options)
+elif browser_choice.lower() == "firefox":
+    options = FirefoxOptions()
+    driver = webdriver.Firefox(service = FirefoxService(GeckoDriverManager().install()), options = options)
+else:
+    print("Invalid browser choice. Please enter 'chrome' or 'firefox'.")
+
 driver.get("http://sdetchallenge.fetch.com/")
 
 # To Read the length of the coins
